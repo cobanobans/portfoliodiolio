@@ -12,7 +12,7 @@ export default function Cylinder() {
   })
 
   const { scale } = useSpring({
-    scale: !active ? [7, 0, 2] : [1.5, 11, 2],
+    scale: !active ? [0, 0, 2] : [1.5, 11, 3],
     // position: !active ? [0, 0.05, 0] : [0, 3, 0],
     // position: [0, 111, 0],
 
@@ -45,9 +45,9 @@ export default function Cylinder() {
       <meshPhysicalMaterial
         color='green'
         emissive='green'
-        emissiveIntensity={2}
-        metalness={0.9}
-        roughness={0.1}
+        emissiveIntensity={3}
+        metalness={6}
+        roughness={6}
         transparent={true}
         opacity={0.8}
         clearcoat={1}

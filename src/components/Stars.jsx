@@ -5,7 +5,7 @@ const max = 50
 
 const getRandomPosition = () => ({
   top: `${Math.floor(Math.random() * (max - min) + min)}%`,
-  left: `${Math.floor(Math.random() * 120)}%`,
+  left: `${Math.floor(Math.random() * 100)}%`,
 })
 
 // Width random finish it !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

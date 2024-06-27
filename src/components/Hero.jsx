@@ -97,7 +97,7 @@ const Hero = () => {
 
       {displayMore && (
         <button className='btn bottom-1/4 translate-y-1/2 left-1/2 transform -translate-x-1/2 text-white border-white  p-2 absolute hover:text-yellow-400 z-30'>
-          click for more
+          toggle navbar
         </button>
       )}
 
@@ -117,7 +117,7 @@ const Hero = () => {
             <planeGeometry args={[300, 200]} />
             <meshBasicMaterial transparent opacity={0} />
           </mesh> */}
-          <DeathStar
+          {/* <DeathStar
             // ref={refStar}
             // onClick={() => setLaserRendered(true)}
             // laserRendered={laserRendered}
@@ -129,7 +129,7 @@ const Hero = () => {
             onClick={() => setClick(true)}
             click={click}
             // onLoad={setIsLoaded(true)}
-          />
+          /> */}
           {/* <Xwinganim position={[100, 0, 5]} />
           <Xwinganim position={[110, 10, 5]} /> */}
           {/* <Tiefighter

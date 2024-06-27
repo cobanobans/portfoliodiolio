@@ -35,11 +35,7 @@ const Links = () => {
             className={`capitalize text-3xl my-10 transition-opacity duration-500  flex  ${
               // hovered === true ? 'pr-10 justify-start' : 'pr-5 justify-end'
               'pr-5 justify-end'
-            }  ${
-              showItems.includes(index)
-                ? 'opacity-100 bg-inherit'
-                : 'opacity-20 bg-green-400'
-            }`}
+            }  ${showItems.includes(index) ? 'opacity-100 ' : 'opacity-20 '}`}
           >
             <a href={link.href} className='hover:text-yellow-400'>
               {link.text}

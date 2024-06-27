@@ -9,11 +9,11 @@ import Stars from './Stars'
 const Skills = () => {
   return (
     <section
-      className='align-element bg-black-to-gray h-screen relative'
+      className='align-element bg-black-to-gray pt-20s relative'
       id='skills'
     >
       <Stars />
-      <div className='flex flex-col mx-40 mt-10 bg-transparent absolute'>
+      <div className='flex flex-col mx-20 xl:mx-40 bg-transparent'>
         <SectionTitle text='tech stack' />
         <div className='py-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
           {skills.map((skill) => {

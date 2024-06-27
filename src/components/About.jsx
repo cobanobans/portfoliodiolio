@@ -15,7 +15,7 @@ const About = () => {
       {/* <div className='fix'></div> */}
       <Stars position={'top'} />
 
-      <div className='grid  grid-cols-1 2xl:grid-cols-2 container mx-40'>
+      <div className='grid  grid-cols-1 2xl:grid-cols-2 container mx-20 xl:mx-40'>
         <article>
           <SectionTitle text='My Journey' />
           <p className='text-slate-400 mt-8 leading-loose'>
@@ -32,8 +32,7 @@ const About = () => {
             authentication, transaction management, and real-time data updates.
           </p>
         </article>
-
-        <div className='h-screen absolute w-full top-0'>
+        {/* <div className='h-screen absolute w-full top-0'>
           <Canvas camera={{ position: [0, 0, 5] }}>
             <Suspense fallback={null}>
               <ambientLight intensity={1} />
@@ -51,9 +50,9 @@ const About = () => {
                 rotation={[0.4, -1, 0]}
               />
               {/* <OrbitControls second={true} target0={[0, 0, 0]} /> */}
-            </Suspense>
-          </Canvas>
-        </div>
+        {/* </Suspense> */}
+        {/* </Canvas> */}
+        {/* </div> */}
         {/* <div className=''>
           <img src={aboutSvg} className='w-full h-64' />
         </div> */}

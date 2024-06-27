@@ -8,13 +8,20 @@ const ProjectsCard = ({ img, url, github, title, text, tech, note }) => {
   const handleSeeMore = () => {
     setIsMore(!isMore)
   }
+
+  const handleOver = () => {
+    // console.log('projectCard')
+  }
   // console.log(text[0])
   return (
-    <article className='bg-slate-400 rounded-lg shadow-md hover:shadow-xl duration-300 opacity-80 hover:opacity-100 h-fit'>
+    <article
+      onMouseOver={handleOver}
+      className={`bg-slate-400 rounded-lg shadow-md hover:shadow-xl duration-300 opacity-80 hover:opacity-100 h-fit`}
+    >
       <a href={url} target='_blank' rel='noopener noreferrer'>
         <img
           src={img}
-          className='w-full object-cover rounded-t-lg 2xl:h-64 md:h-44 '
+          className='w-full object-cover rounded-t-lg 2xl:h-64 md:h-44'
           alt={title}
         />
       </a>
@@ -24,9 +31,8 @@ const ProjectsCard = ({ img, url, github, title, text, tech, note }) => {
           {...tech}
         </h2>
         <p className='mt-4 text-slate-700 leading-2 2xl:leading-loose'>
-          {/* {!isMore && text.split(' ').slice(0, 6).join(' ') + ' ...'} */}
           {isMore === false
-            ? text.split(' ').slice(0, 6).join(' ') + ' ...'
+            ? text.split(' ').slice(0, 10).join(' ') + ' ...'
             : text}
         </p>
         <button
@@ -45,7 +51,7 @@ const ProjectsCard = ({ img, url, github, title, text, tech, note }) => {
         </div>
       </div>
 
-      <div className='align-element text-cyan-600 pb-4'>{note}</div>
+      {/* <div className='align-element text-cyan-600 pb-4'>{note}</div> */}
     </article>
   )
 }
