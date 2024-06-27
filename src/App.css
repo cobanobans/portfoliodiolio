@@ -1,0 +1,97 @@
+.background-image {
+  background-image: url('../src/assets/universe.png');
+  background-size: cover;
+}
+.background-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.99), transparent);
+}
+
+.bg-black-to-gray {
+  background: linear-gradient(to bottom, #000000, #3c3c3f);
+}
+.bg-gray-to-black {
+  background: linear-gradient(to bottom, #3c3c3f, #000000);
+}
+
+.stars-sky {
+  background-image: url('../src/assets/sky-stars.png');
+  background-size: 150%;
+  background-repeat: repeat-x;
+  background-position: left;
+  /* background-size: cover; */
+}
+
+.text-glow {
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(160, 105, 105, 0.2),
+      0 0 10px rgba(255, 255, 255, 0.753), 0 0 20px rgba(255, 255, 255, 0.2),
+      0 0 40px rgba(255, 255, 255, 0.311), 0 0 60px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2),
+      0 0 10px rgba(255, 251, 251, 0.43), 0 0 20px rgba(234, 228, 228, 0.2),
+      0 0 40px rgba(255, 255, 255, 0.2), 0 0 60px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes streaky-move {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
