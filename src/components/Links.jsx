@@ -24,7 +24,7 @@ const Links = () => {
 
   return (
     <div
-      className=' pl-20'
+      className='pl-20'
       onMouseOut={() => setIsHovered(false)}
       onMouseOver={() => setIsHovered(true)}
     >
@@ -32,10 +32,14 @@ const Links = () => {
         {links.map((link, index) => (
           <li
             key={link.id}
-            className={`capitalize text-3xl my-10 transition-opacity duration-500   flex  ${
+            className={`capitalize text-3xl my-10 transition-opacity duration-500  flex  ${
               // hovered === true ? 'pr-10 justify-start' : 'pr-5 justify-end'
               'pr-5 justify-end'
-            }  ${showItems.includes(index) ? 'opacity-100 ' : 'opacity-0'}`}
+            }  ${
+              showItems.includes(index)
+                ? 'opacity-100 bg-inherit'
+                : 'opacity-20 bg-green-400'
+            }`}
           >
             <a href={link.href} className='hover:text-yellow-400'>
               {link.text}

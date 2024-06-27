@@ -12,7 +12,7 @@ export default function Cylinder() {
   })
 
   const { scale } = useSpring({
-    scale: !active ? [1.5, 0, 2] : [1.5, 8, 2],
+    scale: !active ? [7, 0, 2] : [1.5, 11, 2],
     // position: !active ? [0, 0.05, 0] : [0, 3, 0],
     // position: [0, 111, 0],
 

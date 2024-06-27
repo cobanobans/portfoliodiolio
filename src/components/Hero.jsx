@@ -47,17 +47,22 @@ const Hero = () => {
 
   const handlePointerOut = async () => {
     setDisplayMore(false)
+    setStarHovered(false)
   }
   const planeRef = useRef()
   // const refStar = useRef()
 
   const [navLinksActive, setNavlinksActive] = useState(false)
   const [click, setClick] = useState(false)
-  if (click === true) {
-    setTimeout(() => {
-      setNavlinksActive(true)
-    }, 1800)
-  }
+
+  useEffect(() => {
+    if (click === true) {
+      setTimeout(() => {
+        setNavlinksActive(!navLinksActive)
+        setClick(false)
+      }, 1800)
+    }
+  }, [click])
 
   // useEffect(() => {
   //   const timer = setTimeout(() => {
@@ -91,8 +96,8 @@ const Hero = () => {
       </div>
 
       {displayMore && (
-        <button className='btn bottom-1/4 translate-y-1/2 left-1/2 transform -translate-x-1/2 text-white border-white border-2 p-2 absolute hover:text-yellow-400 z-30'>
-          More about me
+        <button className='btn bottom-1/4 translate-y-1/2 left-1/2 transform -translate-x-1/2 text-white border-white  p-2 absolute hover:text-yellow-400 z-30'>
+          click for more
         </button>
       )}
 
@@ -118,14 +123,15 @@ const Hero = () => {
             // laserRendered={laserRendered}
             position={[0, 0, 0]}
             onPointerOver={handlePointerOver}
+            // onPointerOut={handlePointerOut}
             hovered={starHovered}
-            onPointerOut={() => setStarHovered(false)}
+            onPointerOut={handlePointerOut}
             onClick={() => setClick(true)}
             click={click}
             // onLoad={setIsLoaded(true)}
           />
-          <Xwinganim position={[100, 0, 5]} />
-          <Xwinganim position={[110, 10, 5]} />
+          {/* <Xwinganim position={[100, 0, 5]} />
+          <Xwinganim position={[110, 10, 5]} /> */}
           {/* <Tiefighter
               position={[0, 20, 130]}
               scale={0.01}

@@ -21,18 +21,26 @@ export default function Model(props) {
 
   const ref = useRef()
   // // const partRef = useRef()
+  const [direction, setDirection] = useState(0.05)
 
   useFrame((state, delta) => {
     const t = state.clock.getElapsedTime()
 
-    ref.current.rotation.y += delta * 0.1
+    ref.current.rotation.y += direction * delta
+
+    // Reverse direction if rotation exceeds roughly one full circle (2π radians)
+    if (ref.current.rotation.y > Math.PI * 2 || ref.current.rotation.y < 0) {
+      setDirection((prev) => -prev)
+      ref.current.rotation.y = direction > 0 ? Math.PI * 2 : 0
+    }
+
+    // ref.current.rotation.y += delta * 1
     ref.current.rotation.x = 0.2
 
     if (props.hovered === true) {
       // ref.current.rotation.y += delta * 0.09
       // ref.current.rotation.y = Math.PI / 5
       ref.current.scale.set(1.01, 1.01, 1.01)
-      // ref.current.material
       // materials.material.roughness = 2
       // materials.material.metalness = 1.4
       ref.current.rotation.y += (0.5 - ref.current.rotation.y) * 0.05
@@ -44,28 +52,14 @@ export default function Model(props) {
 
     if (props.click === true) {
       setLaserRendered(true)
+    } else {
+      setLaserRendered(false)
     }
 
     // ref.current.scale.set = 2
   })
 
-  // if (props.click === true) {
-  //   setLaserRendered(true)
-  // }
-
-  // const [isClicked, setIsClicked] = useState(false)
-  // const [targetRotation, setTargetRotation] = useState(0)
-
-  // useEffect(() => {
-  //   if (isClicked) {
-  //     // setTargetRotation((ref.current.rotation.y = Math.PI / 7))
-  //   }
-  // }, [isClicked])
-  // const laserRendered = props.laserRendered
   const [laserRendered, setLaserRendered] = useState(false)
-  // useEffect(() => {
-  //   setLaserRendered(true)
-  // }, [])
 
   return (
     <>
