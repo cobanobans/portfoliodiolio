@@ -130,8 +130,8 @@ const Hero = () => {
             click={click}
             // onLoad={setIsLoaded(true)}
           />
-          {/* <Xwinganim position={[100, 0, 5]} />
-          <Xwinganim position={[110, 10, 5]} /> */}
+          <Xwinganim position={[100, 0, 5]} />
+          <Xwinganim position={[110, 10, 5]} />
           {/* <Tiefighter
               position={[0, 20, 130]}
               scale={0.01}
