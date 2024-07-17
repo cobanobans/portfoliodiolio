@@ -94,22 +94,27 @@ const Hero = () => {
       <div className='absolute top-1/2 transform -translate-y-1/2'>
         {isLoaded && <Home />}
       </div>
+      <div
+        className={`lg:hidden absolute top-1/2 left-1/2 transform -translate-y-1/2`}
+      >
+        <Home />
+      </div>
 
       {displayMore && (
         <button className='btn bottom-1/4 translate-y-1/2 left-1/2 transform -translate-x-1/2 text-white border-white  p-2 absolute hover:text-yellow-400 z-30'>
           toggle navbar
         </button>
       )}
-
-      <Canvas camera={{ position: [5, 5, 120], fov: 100 }}>
-        <Suspense fallback={<Loader />}>
-          <ambientLight intensity={1} />
-          <pointLight position={[0, 0, 0]} intensity={1} />
-          <directionalLight
-            position={[10, 10, 10]}
-            intensity={starHovered === true ? 3 : 2}
-          />
-          {/* <mesh
+      <div className='w-full h-screen hidden lg:flex'>
+        <Canvas camera={{ position: [5, 5, 120], fov: 100 }}>
+          <Suspense fallback={<Loader />}>
+            <ambientLight intensity={1} />
+            <pointLight position={[0, 0, 0]} intensity={1} />
+            <directionalLight
+              position={[10, 10, 10]}
+              intensity={starHovered === true ? 3 : 2}
+            />
+            {/* <mesh
             ref={planeRef}
             // onPointerOver={handlePointerOver}
             onPointerOut={handlePointerOut}
@@ -117,29 +122,30 @@ const Hero = () => {
             <planeGeometry args={[300, 200]} />
             <meshBasicMaterial transparent opacity={0} />
           </mesh> */}
-          <DeathStar
-            // ref={refStar}
-            // onClick={() => setLaserRendered(true)}
-            // laserRendered={laserRendered}
-            position={[0, 0, 0]}
-            onPointerOver={handlePointerOver}
-            // onPointerOut={handlePointerOut}
-            hovered={starHovered}
-            onPointerOut={handlePointerOut}
-            onClick={() => setClick(true)}
-            click={click}
-            // onLoad={setIsLoaded(true)}
-          />
-          <Xwinganim position={[100, 0, 5]} />
-          <Xwinganim position={[110, 10, 5]} />
-          {/* <Tiefighter
+            <DeathStar
+              // ref={refStar}
+              // onClick={() => setLaserRendered(true)}
+              // laserRendered={laserRendered}
+              position={[0, 0, 0]}
+              onPointerOver={handlePointerOver}
+              // onPointerOut={handlePointerOut}
+              hovered={starHovered}
+              onPointerOut={handlePointerOut}
+              onClick={() => setClick(true)}
+              click={click}
+              // onLoad={setIsLoaded(true)}
+            />
+            <Xwinganim position={[100, 0, 5]} />
+            <Xwinganim position={[110, 10, 5]} />
+            {/* <Tiefighter
               position={[0, 20, 130]}
               scale={0.01}
               rotation={[0, Math.PI / 4, 0]}
             /> */}
-          {/* <OrbitControls second={true} target0={[0, 0, 0]} /> */}
-        </Suspense>
-      </Canvas>
+            {/* <OrbitControls second={true} target0={[0, 0, 0]} /> */}
+          </Suspense>
+        </Canvas>
+      </div>
 
       <div className='fixed top-1/2 right-0 transform -translate-y-1/2 z-30'>
         {navLinksActive && <Links />}
