@@ -9,7 +9,7 @@ import React, { Suspense } from 'react'
 const About = () => {
   return (
     <section
-      className='bg-black-to-gray py-20 flex items-center justify-center relative h-fit'
+      className='bg-black-to-gray py-20 flex items-center justify-center relative h-fit lg:h-screen'
       id='about'
     >
       {/* <div className='fix'></div> */}
