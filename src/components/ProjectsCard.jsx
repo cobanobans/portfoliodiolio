@@ -32,7 +32,7 @@ const ProjectsCard = ({ img, url, github, title, text, tech, note }) => {
         </h2>
         <p className='mt-4 text-slate-700 leading-2 2xl:leading-loose'>
           {isMore === false
-            ? text.split(' ').slice(0, 10).join(' ') + ' ...'
+            ? text.split(' ').slice(0, 13).join(' ') + ' ...'
             : text}
         </p>
         <button
@@ -41,7 +41,7 @@ const ProjectsCard = ({ img, url, github, title, text, tech, note }) => {
         >
           Show {isMore === true ? 'less' : 'more'}
         </button>
-        <div className='mt-4 flex gap-x-4'>
+        <div className='mt-5 flex gap-x-4'>
           <a href={url} target='_blank' rel='noopener noreferrer'>
             <ImNewTab className='h-8 w-8 text-slate-500 hover:text-black duration-300' />
           </a>

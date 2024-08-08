@@ -5,6 +5,7 @@ import { ImNewTab } from 'react-icons/im'
 
 import EZBankImage from './assets/EZBank.jpg'
 import RentBikeImage from './assets/rent-a-bike.jpg'
+import PortfolioImage from './assets/portfolio.jpg'
 
 export const links = [
   { id: nanoid(), href: '#home', text: 'home' },
@@ -80,6 +81,20 @@ export const projects = [
     github: 'https://github.com/cobanobans/rent-a-bike',
     title: 'Rent-a-bike',
     text: 'Web app created using HTML, CSS, and JavaScript. Features include bike availability, rental scheduling  with Implemented responsive design to ensure usability across various devices.',
+  },
+  {
+    id: nanoid(),
+    tech: [
+      <FaReact className=' text-cyan-600' />,
+      <SiTailwindcss className='text-cyan-600' />,
+      // <FaCss3 className='text-cyan-600' />,
+    ],
+
+    img: PortfolioImage,
+    url: 'https://portfoliodiolio.netlify.app/',
+    github: 'https://github.com/cobanobans/portfoliodiolio',
+    title: 'Portfolio',
+    text: 'A personal portfolio built with React, Three.js, and Fiber. This site showcases my work, featuring animated 3D models on the homepage to create a dynamic and engaging user experience.',
   },
   // {
   //   id: nanoid(),
