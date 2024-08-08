@@ -151,7 +151,7 @@ const Hero = () => {
       <div className='fixed hidden md:flex top-1/2 right-0 transform -translate-y-1/2 z-30'>
         {navLinksActive && <Links />}
       </div>
-      <ButtonMore />
+      {isLoaded && <ButtonMore />}
     </div>
   )
 }
