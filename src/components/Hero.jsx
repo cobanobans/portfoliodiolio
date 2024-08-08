@@ -79,7 +79,7 @@ const Hero = () => {
   const Loader = () => {
     const { progress } = useProgress()
 
-    if (progress === 100) {
+    if (progress > 80) {
       setIsLoaded(true)
     }
     console.log(progress)
