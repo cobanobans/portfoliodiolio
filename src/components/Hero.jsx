@@ -56,7 +56,7 @@ const Hero = () => {
   const [click, setClick] = useState(false)
 
   useEffect(() => {
-    if (click === true) {
+    if (click === true && window.innerWidth > 600) {
       setTimeout(() => {
         setNavlinksActive(!navLinksActive)
         setClick(false)
@@ -91,21 +91,21 @@ const Hero = () => {
 
   return (
     <div className='h-screen background-image relative' id='home'>
-      <div className='absolute top-1/2 transform -translate-y-1/2'>
+      <div className=' absolute left-1/2 transform -translate-x-1/2 top-10  md:top-1/2 md:left-0 md:-translate-x-0  md:-translate-y-1/2 md:flex md:flex-col'>
         {isLoaded && <Home />}
       </div>
-      <div
+      {/* <div
         className={`lg:hidden absolute top-1/2 left-1/2 transform -translate-y-1/2`}
       >
         <Home />
-      </div>
+      </div> */}
 
       {displayMore && (
         <button className='btn bottom-1/4 translate-y-1/2 left-1/2 transform -translate-x-1/2 text-white border-white  p-2 absolute hover:text-yellow-400 z-30'>
           toggle navbar
         </button>
       )}
-      <div className='w-full h-screen hidden lg:flex'>
+      <div className='w-full h-screen'>
         <Canvas camera={{ position: [5, 5, 120], fov: 100 }}>
           <Suspense fallback={<Loader />}>
             <ambientLight intensity={1} />
@@ -147,7 +147,7 @@ const Hero = () => {
         </Canvas>
       </div>
 
-      <div className='fixed top-1/2 right-0 transform -translate-y-1/2 z-30'>
+      <div className='fixed hidden md:flex top-1/2 right-0 transform -translate-y-1/2 z-30'>
         {navLinksActive && <Links />}
       </div>
     </div>

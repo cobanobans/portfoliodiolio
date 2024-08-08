@@ -50,7 +50,7 @@ export default function Model(props) {
       // console.log('Frame out of hover')
     }
 
-    if (props.click === true) {
+    if (props.click === true && window.innerWidth > 600) {
       setLaserRendered(true)
     } else {
       setLaserRendered(false)
