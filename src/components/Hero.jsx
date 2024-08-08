@@ -10,6 +10,7 @@ import Tiefighter from './Tiefighter'
 import Home from './Home'
 import Links from './Links'
 import { Html, useGLTF, useProgress } from '@react-three/drei'
+import ButtonMore from './ButtonMore'
 
 const Hero = () => {
   // const [laserRendered, setLaserRendered] = useState(false)
@@ -150,6 +151,7 @@ const Hero = () => {
       <div className='fixed hidden md:flex top-1/2 right-0 transform -translate-y-1/2 z-30'>
         {navLinksActive && <Links />}
       </div>
+      <ButtonMore />
     </div>
   )
 }

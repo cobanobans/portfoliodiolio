@@ -9,7 +9,7 @@ import React, { Suspense } from 'react'
 const About = () => {
   return (
     <section
-      className='bg-black-to-gray h-screen py-20 flex items-center justify-center relative'
+      className='bg-black-to-gray py-20 flex items-center justify-center relative h-fit'
       id='about'
     >
       {/* <div className='fix'></div> */}
@@ -18,7 +18,7 @@ const About = () => {
       <div className='grid  grid-cols-1 2xl:grid-cols-2 container mx-20 xl:mx-40'>
         <article>
           <SectionTitle text='My Journey' />
-          <p className='text-slate-400 mt-8 leading-loose'>
+          <p className='text-slate-400 leading-loose'>
             I am a self-taught web developer with a passion for creating dynamic
             and responsive web applications. My coding journey began about a
             year ago when I started with freeCodeCamp, after which I built a
