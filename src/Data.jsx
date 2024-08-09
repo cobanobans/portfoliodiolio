@@ -66,7 +66,7 @@ export const projects = [
     url: 'https://e-ztest-2.vercel.app/',
     github: 'https://github.com/cobanobans/EZBank',
     title: 'Banking App',
-    text: 'EZBank is a full stack financial application using Next.js, Prisma, and Clerk for authentication. Handles server-side actions, user deposits, transaction tracking, and payments with imaginary money. Integrated external API for real-time currency checking.',
+    text: 'EZBank is a financial application using Next.js, Prisma, and Clerk for authentication. It handles server-side actions, user deposits, transaction tracking, and payments with imaginary money. The app also integrates an external API for real-time currency checking.',
   },
   {
     id: nanoid(),
