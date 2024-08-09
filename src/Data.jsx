@@ -96,18 +96,4 @@ export const projects = [
     title: 'Portfolio',
     text: 'A personal portfolio built with React, Three.js, and Fiber. This site showcases my work, featuring animated 3D models on the homepage to create a dynamic and engaging user experience.',
   },
-  // {
-  //   id: nanoid(),
-  //   tech: [
-  //     <FaJs className=' text-cyan-600' />,
-  //     <FaHtml5 className='text-cyan-600' />,
-  //     <FaCss3 className='text-cyan-600' />,
-  //   ],
-
-  //   img: RentBikeImage,
-  //   url: 'https://rent-a-bici.netlify.app/',
-  //   github: 'https://github.com/cobanobans/rent-a-bike',
-  //   title: 'Backroads App',
-  //   text: 'Web app created using HTML, CSS, and JavaScript. Features include bike availability, rental scheduling  with Implemented responsive design to ensure usability across various devices.',
-  // },
 ]
