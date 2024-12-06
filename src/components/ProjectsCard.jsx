@@ -25,7 +25,7 @@ const ProjectsCard = ({ img, url, github, title, text, tech, note }) => {
           alt={title}
         />
       </a>
-      <div className='capitalize p-8 flex flex-col'>
+      <div className=' p-8 flex flex-col'>
         <h2 className='text-xl tracking-wide font-medium flex flex-row items-center gap-5'>
           {title}
           {...tech}

@@ -6,6 +6,7 @@ import { ImNewTab } from 'react-icons/im'
 import EZBankImage from './assets/EZBank.jpg'
 import RentBikeImage from './assets/rent-a-bike.jpg'
 import PortfolioImage from './assets/portfolio.jpg'
+import GattralabImage from './assets/gattralabImage.jpg'
 
 export const links = [
   { id: nanoid(), href: '#home', text: 'home' },
@@ -55,6 +56,19 @@ export const skills = [
 ]
 
 export const projects = [
+  {
+    id: nanoid(),
+    tech: [
+      <SiNextdotjs className=' text-cyan-600' />,
+      <SiTailwindcss className='text-cyan-600' />,
+    ],
+
+    img: GattralabImage,
+    url: 'https://gattra-lab.vercel.app/',
+    github: 'https://github.com/cobanobans/gattraLab',
+    title: 'GattraLab',
+    text: `The website is a photography and music portfolio built for a client, featuring an image and video gallery. It showcases the client's work with a sleek, user-friendly design, emphasizing visual and auditory content. This is my first real-world project beyond personal work.`,
+  },
   {
     id: nanoid(),
     // note: 'Note: Please use email: djolej17@gmail.com and pass: DjordjeTest to login, or create your account',
